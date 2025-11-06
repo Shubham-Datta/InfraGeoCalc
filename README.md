@@ -33,11 +33,10 @@ infrageocalc/
 ├── .github/              # CI configuration
 │   └── workflows/
 │       └── ci.yml
-├── build/                # Compiled binaries (ignored via .gitignore)
+├── build/                # Compiled binaries (ignored by .gitignore)
 ├── README.md
 ├── Makefile              # Build instructions
 └── .gitignore            # Ignore rules
-
 
 ### Requirements
 - C compiler (e.g., GCC or Clang) with pthread support.
@@ -129,4 +128,5 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 
 ### License
 MIT License .
+
 
