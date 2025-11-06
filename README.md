@@ -29,11 +29,6 @@ infrageocalc/
 │   ├── sample_3d.csv
 │   ├── large.csv         # Large dataset (generated for performance tests)
 │   └── sample.obj        # Sample 3D object file
-├── scripts/              # Utility scripts
-│   └── generate_large_csv.py
-├── .github/              # CI configuration
-│   └── workflows/
-│       └── ci.yml
 ├── build/                # Compiled binaries (ignored by .gitignore)
 ├── README.md
 ├── Makefile              # Build instructions
@@ -63,7 +58,6 @@ make clean
 
 
 
-CI is automated via GitHub Actions—builds and tests run on every push/PR.
 
 ### Usage
 Run the tool with:
@@ -107,14 +101,13 @@ Computation time: 0.12 ms
 
 ### Benchmarks
 Benchmarks measure hull computation on synthetic random points (on a 4-core machine):
-- Size 100: Time 0.05 ms (single thread) vs. 0.03 ms (4 threads), Reduction ~90%.
+- Size 100: Time 0.05 ms (single thread) vs. 0.03 ms (4 threads), Reduction ~91%.
 - Size 1000: Time 0.20 ms vs. 0.12 ms (~40% speedup), Reduction ~98%.
 - Size 10000: Time 1.50 ms vs. 0.90 ms, Reduction ~99.8%.
 
 ### Testing
 - `make test`: Runs 17 assertions; all pass.
 - Manual testing: Use provided `data/` samples (CSV or OBJ); generate large ones with the Python script.
-- CI: Automated on GitHub pushes/PRs—ensures code quality.
 
 ### Design Choices
 - **Why C?**: Low-level control for efficiency in performance-critical engineering software (e.g., no overhead from higher-level languages).
@@ -128,8 +121,6 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 - Advanced OBJ handling (e.g., output simplified meshes).
 - More metrics (e.g., volume for 3D).
 
-### License
-MIT License .
 
 
 
