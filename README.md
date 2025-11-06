@@ -14,29 +14,29 @@ InfraGeoCalc is a high-performance, command-line tool written in pure C (C99) fo
 
 ### Folder Structure
 infrageocalc/
-├── src/ # Source code
-│ ├── main.c
-│ ├── geometry.c
-│ └── io.c
-├── include/ # Headers
-│ └── geometry.h
-├── tests/ # Unit tests
-│ ├── test_geometry.c
-│ └── test_main.c
-├── data/ # Sample data
-│ ├── sample_2d.csv
-│ ├── sample_3d.csv
-│ ├── large.csv # Generated large CSV for testing
-│ └── sample.obj # Sample OBJ for testing
-├── scripts/ # Helper scripts
-│ └── generate_large_csv.py # Script to create large test files
-├── .github/ # CI workflows
-│ └── workflows/
-│ └── ci.yml
-├── build/ # Compiled binaries (git-ignored)
-├── README.md # This file
-├── Makefile # Build script
-└── .gitignore # Git ignore rules
+├── src/                  # Source code
+│   ├── main.c
+│   ├── geometry.c
+│   └── io.c
+├── include/              # Header files
+│   └── geometry.h
+├── tests/                # Unit tests
+│   ├── test_geometry.c
+│   └── test_main.c
+├── data/                 # Sample datasets
+│   ├── sample_2d.csv
+│   ├── sample_3d.csv
+│   ├── large.csv         # Large dataset (generated for performance tests)
+│   └── sample.obj        # Sample 3D object file
+├── scripts/              # Utility scripts
+│   └── generate_large_csv.py
+├── .github/              # CI configuration
+│   └── workflows/
+│       └── ci.yml
+├── build/                # Compiled binaries (ignored via .gitignore)
+├── README.md
+├── Makefile              # Build instructions
+└── .gitignore            # Ignore rules
 
 
 ### Requirements
@@ -129,3 +129,4 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 
 ### License
 MIT License .
+
