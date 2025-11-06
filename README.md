@@ -1,9 +1,7 @@
 # InfraGeoCalc: Efficient Geometric Calculator for Infrastructure Coordinates
 
 ## Overview
-InfraGeoCalc is a high-performance, command-line tool written in pure C (C99) for processing and optimizing 2D/3D coordinate data in infrastructure engineering contexts, such as road alignments or bridge layouts. It computes convex hulls to simplify point sets (reducing redundancy while preserving shapes), along with metrics like distances, areas, and perimeters. This project demonstrates advanced C programming skills, including dynamic memory management, efficient algorithms (e.g., Graham's Scan for O(n log n) convex hull), multithreading for scalability, benchmarking for performance analysis, support for industry formats like OBJ, error handling, and unit testing—making it suitable for production-level software.
-
-This project was developed and iterated as a portfolio piece for a Bentley Systems Software Engineering Internship. Bentley specializes in infrastructure software (e.g., MicroStation, OpenRoads, iTwin), where optimizing geospatial data is key for digital twins and simulations. This tool could extend Bentley's pipelines by efficiently simplifying large point clouds or meshes from LiDAR/CAD exports, with multithreading reducing processing time by up to 40% on multi-core systems and OBJ support enabling direct integration with 3D models.
+InfraGeoCalc is a high-performance, command-line tool written in pure C (C99) for processing and optimizing 2D/3D coordinate data in infrastructure engineering contexts, such as road alignments or bridge layouts. It computes convex hulls to simplify point sets (reducing redundancy while preserving shapes), along with metrics like distances, areas, and perimeters. This project demonstrates advanced C programming skills, including dynamic memory management, efficient algorithms (e.g., Graham's Scan for O(n log n) convex hull), multithreading for scalability, benchmarking for performance analysis, support for industry formats like OBJ, error handling, and unit testing.
 
 ### Key Features
 - **Input/Output**: Parses CSV (x,y[,z]) or OBJ files (extracts vertices from "v x y z" lines); auto-detects 2D/3D and file type by extension.
@@ -111,7 +109,6 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 - Size 100: Time 0.05 ms (single thread) vs. 0.03 ms (4 threads), Reduction ~90%.
 - Size 1000: Time 0.20 ms vs. 0.12 ms (~40% speedup), Reduction ~98%.
 - Size 10000: Time 1.50 ms vs. 0.90 ms, Reduction ~99.8%.
-These show scalability for large infrastructure datasets, like those in Bentley's iTwin platform.
 
 ### Testing
 - `make test`: Runs 17 assertions; all pass.
@@ -120,19 +117,15 @@ These show scalability for large infrastructure datasets, like those in Bentley'
 
 ### Design Choices
 - **Why C?**: Low-level control for efficiency in performance-critical engineering software (e.g., no overhead from higher-level languages).
-- **Multithreading**: Parallelizes sorting for speedup on large sets, relevant for Bentley's cloud-based processing.
+- **Multithreading**: Parallelizes sorting for speedup on large sets.
 - **Benchmarking**: Quantifies improvements, e.g., 40% faster with 4 threads, simulating real-world infrastructure data optimization.
 - **OBJ Support**: Parses vertices from OBJ files, enabling simplification of 3D meshes common in CAD exports (e.g., from MicroStation).
 - **Limitations (MVP)**: Hull is 2D-projected; OBJ parsing is basic (vertices only). Extensions could include full 3D hulls or face preservation.
 
-### Relevance to Bentley
-This project addresses challenges in Bentley's ecosystem, such as optimizing meshes for digital twins in iTwin or road designs in OpenRoads. For example, multithreaded hull simplification with OBJ support could reduce data for faster rendering/analysis, handling massive LiDAR or CAD datasets efficiently. Iterated features like benchmarking demonstrate scalability for infrastructure simulations.
-
 ### Future Improvements
 - Full 3D convex hull algorithm.
 - Advanced OBJ handling (e.g., output simplified meshes).
-- Integration with Bentley's APIs (e.g., iTwin services).
 - More metrics (e.g., volume for 3D).
 
 ### License
-MIT License (feel free to use/modify).
+MIT License .
