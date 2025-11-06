@@ -9,7 +9,7 @@ InfraGeoCalc is a high-performance, command-line tool written in pure C (C99) fo
 - **Metrics**: Computes Euclidean distances, polygon areas (shoelace formula), and path lengths (perimeters).
 - **CLI**: Options for mode, dimension, threads, and benchmarking.
 - **Performance**: Dynamic arrays, timing, multithreading (e.g., --threads 4 for speedup), and benchmarking mode for scalability testing.
-- **Testing**: Unit tests and GitHub Actions CI for automated builds/tests.
+- **Testing**: Unit tests.
 - **Production Practices**: Modular code, error handling, memory leak prevention, and Makefile for builds.
 
 ### Folder Structure
@@ -120,6 +120,7 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 - Full 3D convex hull algorithm.
 - Advanced OBJ handling (e.g., output simplified meshes).
 - More metrics (e.g., volume for 3D).
+
 
 
 
