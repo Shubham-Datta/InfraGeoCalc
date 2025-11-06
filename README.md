@@ -38,8 +38,6 @@ infrageocalc/
 ### Requirements
 - C compiler (e.g., GCC or Clang) with pthread support.
 - Standard libraries only (no external dependencies).
-- Python 3 (optional, for generating large test data via scripts/generate_large_csv.py).
-- Tested on Linux/Mac; should work on Windows with MinGW.
 
 ### Build Instructions
 1. Clone the repo (or navigate to the project folder).
@@ -120,6 +118,7 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 - Full 3D convex hull algorithm.
 - Advanced OBJ handling (e.g., output simplified meshes).
 - More metrics (e.g., volume for 3D).
+
 
 
 
