@@ -13,6 +13,7 @@ InfraGeoCalc is a high-performance, command-line tool written in pure C (C99) fo
 - **Production Practices**: Modular code, error handling, memory leak prevention, and Makefile for builds.
 
 ### Folder Structure
+```
 infrageocalc/
 ├── src/                  # Source code
 │   ├── main.c
@@ -37,6 +38,7 @@ infrageocalc/
 ├── README.md
 ├── Makefile              # Build instructions
 └── .gitignore            # Ignore rules
+```
 
 ### Requirements
 - C compiler (e.g., GCC or Clang) with pthread support.
@@ -128,5 +130,6 @@ Benchmarks measure hull computation on synthetic random points (on a 4-core mach
 
 ### License
 MIT License .
+
 
 
